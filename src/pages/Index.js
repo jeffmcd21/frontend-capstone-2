@@ -7,18 +7,30 @@ const Landing = () => {
 
     return (
     <div>
+        
+
+
         {menus.map((menu) => (
             <div key={menu._id}>
                 <Link to={`${menu._id}`}>
                     <h1>{menu.name}</h1>
                 </Link>
-                {menu.image && <img src={menu.image} alt={menu.name} />}
+                {menu.image && <img src={menu.image} alt={menu.name} width="250px"height="250px"/>}
                 <h5>{menu.description}</h5>
                 <h5>{menu.price}</h5>
 
             </div>
                 ))
         }
+
+        <h2>Add Menu Item</h2>
+        <Form action="/create" method="post">
+            <input type="input" name="name" placeholder="name" />
+            <input type="input" name="image" placeholder="image" />
+            <input type="input" name="description" placeholder="description" />
+            <input type="input" name="price" placeholder="price" />
+            <input type="submit" value="Add Item" />
+        </Form>
     </div>
     )}
 
