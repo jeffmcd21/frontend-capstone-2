@@ -1,15 +1,13 @@
 
 import { useLoaderData, Link, Form } from "react-router-dom";
-import { useState } from "react";
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+// import { useState } from "react";
 
 const Landing = () => {
     const menus = useLoaderData()
 
     return (
     <div>
-        
-
-
         {menus.map((menu) => (
             <div key={menu._id}>
                 <Link to={`${menu._id}`}>
