@@ -22,7 +22,7 @@ const Landing = () => {
         } */}
         <div className="container position-relative">
         <img src="https://st2.depositphotos.com/3742757/6877/v/450/depositphotos_68774435-stock-illustration-vector-modern-flat-design-illustration.jpg"
-             alt="Background Image"
+             alt="restaurant store front"
              width="100%"
              height="auto"
              className="img-fluid"
