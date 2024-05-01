@@ -20,7 +20,7 @@ await fetch(`${URL}menu/${params.id}`, {
     body: JSON.stringify(updatedMenu)
 })
 
-return redirect("/")
+return redirect("/menu/")
 }
 
 //create
@@ -40,12 +40,12 @@ export const createAction = async ({request, params}) => {
         body: JSON.stringify(createdMenu)
     })
     
-    return redirect("/")
+    return redirect("/menu/")
     }
-    //delete
-    export const deleteAction = async ({params}) => {
-        await fetch (`${URL}menu/${params.id}`, {
-            method: 'delete'
-        });
-        return redirect('/')
-    }
+//delete
+export const deleteAction = async ({params}) => {
+    await fetch (`${URL}menu/${params.id}`, {
+        method: 'delete'
+    });
+    return redirect('/menu/')
+}

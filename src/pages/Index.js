@@ -1,9 +1,9 @@
 
-import { useLoaderData, Link, Form } from "react-router-dom";
+import { Form } from "react-router-dom";
 // import { useState } from "react";
 
 const Landing = () => {
-    const menus = useLoaderData()
+    // const menus = useLoaderData()
 
     return (
         <div>

@@ -6,7 +6,7 @@ const Show = () => {
     <div>
       <h1>{menu.name}</h1>
       <h3>{menu.description}</h3>
-      <h5>{menu.price}</h5>
+      <h5>${menu.price}</h5>
       <img src={menu.image} alt={menu.name} width="300px"height="300px"/>
 
       <h2>Update {menu.name}</h2>
@@ -17,6 +17,8 @@ const Show = () => {
         <input type="input" name="price" placeholder="price" defaultValue={menu.price} />
         <input type="submit" value={`Update ${menu.name}`} />
       </Form>
+
+      <hr/>
 
       <h2>Delete {menu.name}</h2>
       <Form action={`/delete/${menu._id}`} method='post'>
