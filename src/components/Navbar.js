@@ -8,7 +8,7 @@ const NavbarComponent = () => {
   return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-            <Link className="navbar-brand" to="/">Navbar</Link>
+            <Link className="navbar-brand" to="/">Winfields Scratch Kitchen</Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
             </button>
@@ -18,22 +18,22 @@ const NavbarComponent = () => {
                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                 </li>
                 <li className="nav-item">
-                <Link className="nav-link" to="/">Link</Link>
+                <Link className="nav-link" to="/menu">Menu</Link>
                 </li>
                 <li className="nav-item dropdown">
                 <Link className="nav-link dropdown-toggle" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Dropdown
                 </Link>
                 <ul className="dropdown-menu">
-                    <li><Link className="dropdown-item" to="/">Action</Link></li>
-                    <li><Link className="dropdown-item" to="/">Another action</Link></li>
+                    <li><Link className="dropdown-item" to="/signup">Signup</Link></li>
+                    <li><Link className="dropdown-item" to="/login">Login</Link></li>
                     <li><hr className="dropdown-divider" /></li>
-                    <li><Link className="dropdown-item" to="#">Something else here</Link></li>
+                    <li><Link className="dropdown-item" to="/logout">Logout</Link></li>
                 </ul>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                 <Link className="nav-link disabled" aria-disabled="true">Disabled</Link>
-                </li>
+                </li> */}
             </ul>
             <form className="d-flex" role="search">
                 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />

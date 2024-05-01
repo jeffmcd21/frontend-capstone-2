@@ -20,7 +20,7 @@ const Show = () => {
 
       <h2>Delete {menu.name}</h2>
       <Form action={`/delete/${menu._id}`} method='post'>
-        <input type="submit" value={`delete ${menu.name}`} />
+        <input type="submit" value={`Delete ${menu.name}`} />
       </Form>
     </div>
   )
