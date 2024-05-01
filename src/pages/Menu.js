@@ -7,19 +7,31 @@ const Menu = () => {
 
     return (
     <div>
-        <h2>Menu</h2>
+        <div className="container mt-3 mb-5">
+      <h2>Menu</h2>
+      <div className="row row-cols-1 row-cols-md-3 g-4">
         {menus.map((menu) => (
-            <div key={menu._id}>
-                <Link to={`${menu._id}`}>
-                    <h1>{menu.name}</h1>
-                </Link>
-                {menu.image && <img src={menu.image} alt={menu.name} width="250px"height="250px"/>}
-                <h5>{menu.description}</h5>
-                <h6>{menu.price}</h6>
-
-            </div>
-                ))
-        }
+          <div key={menu._id} className="col">
+            <Link to={`${menu._id}`} className="text-decoration-none">
+              <div className="card h-100 shadow-sm">
+                {menu.image && (
+                  <img
+                    src={menu.image}
+                    alt={menu.name}
+                    className="card-img-top"
+                  />
+                )}
+                <div className="card-body">
+                  <h5 className="card-title">{menu.name}</h5>
+                  <p className="card-text">{menu.description}</p>
+                  <h6>${menu.price}</h6>
+                </div>
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
+    </div>
 
         {/* <h2>Add Menu Item</h2>
         <Form action="/create" method="post">

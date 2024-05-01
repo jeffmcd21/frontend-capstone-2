@@ -7,7 +7,7 @@ const Landing = () => {
 
     return (
         <div>
-        <h2>Home</h2>
+        {/* <h2>Home</h2> */}
         {/* {menus.map((menu) => (
             <div key={menu._id}>
                 <Link to={`${menu._id}`}>
@@ -20,15 +20,23 @@ const Landing = () => {
             </div>
                 ))
         } */}
-
+        <div className="container position-relative">
+        <img src="https://st2.depositphotos.com/3742757/6877/v/450/depositphotos_68774435-stock-illustration-vector-modern-flat-design-illustration.jpg"
+             alt="Background Image"
+             width="100%"
+             height="auto"
+             className="img-fluid"
+        />
         <h2>Add Menu Item</h2>
-        <Form action="/create" method="post">
+        <Form action="/create" method="post" className="position-absolute top-50 start-50 translate-middle">
             <input type="input" name="name" placeholder="name" />
             <input type="input" name="image" placeholder="image" />
             <input type="input" name="description" placeholder="description" />
             <input type="input" name="price" placeholder="price" />
             <input type="submit" value="Add Item" />
         </Form>
+        </div>
+
     </div>
     )}
 
