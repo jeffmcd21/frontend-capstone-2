@@ -6,7 +6,7 @@ const Landing = () => {
     // const menus = useLoaderData()
 
     return (
-        <div>
+        <div className="landing-container">
         {/* <h2>Home</h2> */}
         {/* {menus.map((menu) => (
             <div key={menu._id}>
@@ -27,12 +27,12 @@ const Landing = () => {
              height="auto"
              className="img-fluid"
         />
-        <h2>Add Menu Item</h2>
+        {/* <h2 className="position-absolute top-50 start-50">Add Menu Item</h2> */}
         <Form action="/create" method="post" className="position-absolute top-50 start-50 translate-middle">
-            <input type="input" name="name" placeholder="name" />
-            <input type="input" name="image" placeholder="image" />
-            <input type="input" name="description" placeholder="description" />
-            <input type="input" name="price" placeholder="price" />
+            <input type="text" name="name" placeholder="name" />
+            <input type="text" name="image" placeholder="image" />
+            <input type="text" name="description" placeholder="description" />
+            <input type="number" name="price" placeholder="price" />
             <input type="submit" value="Add Item" />
         </Form>
         </div>

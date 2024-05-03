@@ -5,6 +5,7 @@ const Show = () => {
   const menu = useLoaderData();
 
   return (
+    <div className='landing-container'>
     <div className="container mt-3 mb-5">
       <div className="row">
         <div className="col-md-6">
@@ -30,7 +31,7 @@ const Show = () => {
             </div>
             <div className="mb-3">
               <label htmlFor="price">Price</label>
-              <input type="text" name="price" placeholder="price" defaultValue={menu.price} id="price" className="form-control" />
+              <input type="number" name="price" placeholder="price" defaultValue={menu.price} id="price" className="form-control" />
             </div>
             <input type="submit" value={`Update ${menu.name}`} className="btn btn-primary" />
           </Form>
@@ -43,6 +44,7 @@ const Show = () => {
           </Form>
         </div>
       </div>
+    </div>
     </div>
   )
 }
